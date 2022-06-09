@@ -1,17 +1,17 @@
 import React, { useEffect, useLayoutEffect, useRef } from 'react';
-import { modal } from '../uswds/src/js/components';
-
+import modal from '@uswds/uswds/packages/usa-modal/src/index';
+console.log(modal);
 export default function App() {
   const path = window.location.pathname;
   return (
     <>
-    <div>
-      <a href="/modal1">Show modal component 1</a>&nbsp;
-      <a href="/modal2">Show modal component 2</a>&nbsp;
-      <a href="/modal3">Show modal component 3</a>
-      <br />
-      <br />
-    </div>
+      <div>
+        <a href="/modal1">Show modal component 1</a>&nbsp;
+        <a href="/modal2">Show modal component 2</a>&nbsp;
+        <a href="/modal3">Show modal component 3</a>
+        <br />
+        <br />
+      </div>
       {(path === '/modal1' || path === '/') &&
         <>
           <ModalButton modalId="modal1">Open Modal</ModalButton>
